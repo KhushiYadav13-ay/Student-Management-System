@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="notification"></div>
+
+    <div class="container">
+      <h1>Student Management System</h1>
+
+      <!-- Dashboard -->
+
+      <div class="dashboard">
+        <div class="card">
+          <h3>Total Students</h3>
+          <p id="totalStudents">0</p>
+        </div>
+
+        <div class="card">
+          <h3>Average CGPA</h3>
+          <p id="averageCgpa">0.00</p>
+        </div>
+
+        <div class="card">
+          <h3>Total Branches</h3>
+          <p id="totalBranches">0</p>
+        </div>
+      </div>
+
+      <!-- Add Student -->
+
+      <div class="form-section">
+        <h2>Add Student</h2>
+
+        <form id="studentForm">
+          <input type="number" id="rollNo" placeholder="Roll Number" required />
+
+          <input type="text" id="name" placeholder="Student Name" required />
+
+          <input type="text" id="branch" placeholder="Branch" required />
+
+          <input
+            type="number"
+            id="cgpa"
+            placeholder="CGPA"
+            step="0.01"
+            min="0"
+            max="10"
+            required
+          />
+
+          <button type="submit">Add Student</button>
+        </form>
+      </div>
+
+      <!-- Student Records -->
+
+      <div class="student-section">
+        <h2>Student Records</h2>
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search student by roll number or name"
+        />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Roll No</th>
+              <th>Name</th>
+              <th>Branch</th>
+              <th>CGPA</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody id="studentTable"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
